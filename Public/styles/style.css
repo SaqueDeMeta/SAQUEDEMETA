@@ -1,0 +1,366 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    color: black;
+    overflow-x: hidden;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: black;
+    border-bottom: 1px solid #444;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.title {
+    font-family: 'The Seasons', serif;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    flex: 1; /* Permite que el título ocupe todo el espacio disponible */
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    
+}
+
+.hamburger div {
+    width: 100%;
+    height: 4px;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.3s;
+    margin-left: 11px;
+}
+
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+nav {
+    display: none;
+    position: absolute;
+    top: 88px;
+    left: 20px;
+    flex-direction: column;
+    gap: 10px;
+    background-color: black;
+    padding: 15px;
+    border:solid #444;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+nav.active {
+    display: flex;
+}
+
+nav a {
+    font-family: 'The Seasons', serif;
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #444;
+}
+
+.nav-right a {
+    font-family: 'Ginebra', monospace;
+    font-size: 18.5px;
+    text-decoration: none; /* Quita la línea de enlace */
+    color: rgb(202, 40, 40); /* Cambia el color del texto a blanco */
+}
+
+.nav-right a img {
+    width: 90px; /* Ajusta el ancho del logo */
+    height: auto; /* Mantiene la proporción del logo */
+    vertical-align: middle; /* Alinea el logo verticalmente con el texto */
+    margin-left: 5px; /* Agrega un pequeño espacio entre el texto y el logo */
+}
+
+.main-content {
+    padding: 40px;
+    text-align: center;
+}
+
+.news-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.news-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.news-item h2 {
+    margin: 0;
+}
+
+.news-item p {
+    color: #333;
+}
+
+.news-item img {
+    max-width: 90%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    border-top: 1px solid #444;
+    position: relative;
+    width: 100%;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.active {
+    opacity: 1;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* Estilo de la lista personalizada */
+.custom-list {
+    counter-reset: list-counter;
+    list-style: none; /* Quita el estilo por defecto */
+    padding-left: 0;
+}
+
+.custom-list li {
+    counter-increment: list-counter; /* Incrementa el contador */
+    margin: 15px 0;
+    padding: 10px 15px;
+    background: #b11226; /* Tinto */
+    border-radius: 8px; /* Bordes redondeados */
+    color: white; /* Texto en blanco */
+    font-weight: bold;
+    box-shadow: 2px 2px 6px rgba(255, 255, 255, 0.1); /* Sombra ligera */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agrega transiciones */
+}
+
+.custom-list li:hover {
+    transform: scale(1.05); /* Escala ligeramente al pasar el cursor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra */
+    text-decoration: none; /* Asegura que no haya subrayado al pasar el cursor */
+}
+
+/* Estilo del número personalizado */
+.custom-list li::before {
+    content: counter(list-counter) ". ";
+    color: #fff; /* Número en blanco */
+    font-weight: bold;
+}
+
+.video-container iframe {
+    border: 10px solid black;  /* Bordes negros */
+    border-radius: 5px;        /* Bordes redondeados (opcional) */
+}
+
+.logos-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los logos se envuelvan en pantallas pequeñas */
+}
+
+.logo-container {
+    text-align: center;
+    margin: 20px;
+
+    transition: box-shadow 0.3s ease;
+}
+
+.logo-container img {
+    max-width: 220px; /* Ajusta el tamaño de los logos */
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    transition: transform 0.3s ease;
+}
+
+.logo-caption {
+    font-size: 15px;
+    color: #555;
+    margin-top: 20px;
+}
+
+.logo-container:hover img {
+    transform: scale(1.1);
+}
+
+.logo-container:hover {
+    box-shadow: 0 rgba(0, 0, 0, 0.2);
+}
+
+a img {
+    transition: transform 0.3s ease;
+}
+
+a:hover img {
+    transform: scale(1.04);
+}
+
+a {
+    transition: box-shadow 0.3s ease;
+}
+
+a:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-button-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.contact-button {
+    background-color: #b11226;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #920f21;
+    transform: scale(1.05);
+}
+
+.contact-form-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form {
+    width: 80%; /* Ajusta el ancho para que se vea bien en pantallas más grandes */
+    max-width: 500px; /* Ancho máximo para evitar que sea demasiado grande */
+    margin: 20px auto; /* Centra el formulario */
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form textarea {
+    width: calc(100% - 20px); /* Ajusta el ancho para compensar el padding */
+    height: 150px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form-buttons {
+    text-align: center;
+}
+
+.contact-form-buttons button {
+    background-color: #b11226;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.contact-form-buttons button:hover {
+    background-color: #920f21;
+}
+
+iframe {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+iframe:hover {
+    transform: scale(1.01); /* Escala ligeramente el video */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0); /* Agrega una sombra */
+}
+
+.message-sent-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.368);
+    justify-content: center;
+    align-items: center;
+}
+
+.message-sent-box {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+
+
+

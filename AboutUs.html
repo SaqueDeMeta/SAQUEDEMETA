@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SAQUE DE META</title>
+    <link rel="stylesheet" href="Public/styles/style.css">
+    <link rel="stylesheet" href="../Style/team.css"> <!-- Enlace al nuevo CSS -->
+    <meta name="description" content="SAQUE DE META: Tu fuente de noticias y tendencias del fútbol. Mantente al día con los últimos partidos, análisis y noticias del mundo del fútbol.">
+    <meta name="keywords" content="fútbol, noticias de fútbol, tendencias de fútbol, partidos de fútbol, análisis de fútbol, La Liga, Messi, MLS, Real Madrid, Barcelona, Arda Güler, SAQUE DE META">
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="nav-left">
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="news.html">News</a>
+                <a href="trending.html">Trending</a>
+            </nav>
+        </div>
+
+        <h1 class="title">ABOUT US</h1>
+
+        <div class="nav-right">
+
+            <a href="AboutUs.html">About Us</a>
+            <a href="index.html"><img src="Public/img/logo.png.png" alt="Nuestro Logo"></a>
+
+        </div>
+
+    </header>
+
+    <!-- Sección "Sobre Nosotros" -->
+    <div class="news-item fade-in">
+        <section class="main-content">
+            <h1>Lo que somos</h1>
+            <p>SAQUE DE META es tu fuente principal de noticias y tendencias del mundo del fútbol. Nos apasiona brindarte la información más reciente y relevante, desde los partidos más emocionantes hasta los análisis más profundos.</p>
+            <p>Somos alumnos de 11° grado del Colegio Altamira, inspirados a diseñar una página web sobre lo que más nos gusta... ¡El fútbol!</p>
+        </section>
+    </div>
+
+    <div class="news-item fade-in">
+        <section class="main-content">
+           <i> <h2>Favourite Quotes:</h2> </i>
+            <i>
+            <p>"SAQUE DE META es más que una página web, es un punto de encuentro para todos los que amamos el fútbol."</p>
+            <p>"Somos estudiantes, somos amigos, somos fanáticos del fútbol. Y queremos que tú también seas parte de nuestra historia."</p>
+            <p>"SAQUE DE META nació de una conversación entre amigos, de esas que duran horas y horas. Queremos que te sientas como en casa."</p>
+            <p>"Aquí no hay jerarquías ni formalismos. Solo fútbol, pasión y ganas de competir."</p>
+            <p>"En SAQUE DE META, hablamos el idioma del fútbol. Ese idioma que todos entendemos."</p>
+         <b>  <p>"Advertencia: SAQUE DE META puede causar adicción al fútbol. Leer bajo su propio riesgo."</p> </b> 
+        </i>
+    </section>
+</div>
+
+    <div class="news-item fade-in">
+        <section class="main-content logos-section">
+            <div class="logo-container">
+                <a href="https://www.altamira.edu.mx/">
+                <img src="Public/img/colegio.png" alt="Logo del Colegio">
+            </a>
+               <b><p class="logo-caption">Nuestro colegio, donde comenzó nuestra pasión por el fútbol.</p> </b>
+            </div>
+            <div class="logo-container">
+                <img src="Public/img/logo.png.png" alt="Logo del Proyecto">
+               <b> <p class="logo-caption">El logo del proyecto, representando nuestros colores.</p> </b>
+            </div>
+        </section>
+    </div>
+
+    <!-- Sección "Miembros del Equipo" -->
+    <div class="news-item fade-in">
+        <section class="main-content">
+            <h2>Conoce a Nuestro Equipo</h2>
+        <i>  <h4>"Detrás de cada noticia y cada análisis, hay un equipo de personas reales, con historias y sueños como los tuyos."</h4>  </i> 
+            <ol class="custom-list">
+                <a href="https://www.instagram.com/pabloo_zepeda/">
+                <li>Pablo Andrés Zepeda Ochoa</li>
+            </a>
+                <a href="https://www.instagram.com/aza_alcazar/">
+                <li>Azahel Leonardo Alcázar León</li>
+            </a>
+                <a href="https://www.instagram.com/pipe.ore/">
+                <li>Luis Felipe Orellana Buenrostro</li>
+            </a>
+            </ol>
+        </section>
+    </div>
+
+
+    <div class="contact-button-container">
+        <button class="contact-button" onclick="openContactForm()">¡Contáctanos!</button>
+    </div>
+
+    <div class="contact-form-overlay" id="contactFormOverlay">
+        <div class="contact-form news-item"> <h2>Envíanos un mensaje</h2>
+            <textarea id="message" placeholder="Escribe tu mensaje aquí"></textarea>
+            <div class="contact-form-buttons">
+                <button onclick="sendMessage()">Enviar</button>
+                <button onclick="closeContactForm()">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="message-sent-overlay" id="messageSentOverlay">
+        <div class="message-sent-box news-item">
+            <p>¡Tu mensaje ha sido enviado!</p>
+        </div>
+    </div>
+
+
+    <!-- Pie de página -->
+    <footer>
+        &copy; 2025 SAQUE DE META. All rights reserved.
+    </footer>
+
+    <script src="Public/styles/script.js"></script>
+
+</body>
+
+</html>
